@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "d:\\DADOS\\Pessoal\\Pós\\Service.Notification\\Service.Notification\\03_Tech_Challenge_Servico_Notificacao\\Service.Notification\\Service.Notification\\Service.Notification.csproj": {}
+    "D:\\DADOS\\Pessoal\\Pós\\Service.Notification\\Service.Notification\\03_Tech_Challenge_Servico_Notificacao\\Service.Notification\\Service.Notification\\Service.Notification.csproj": {}
   },
   "projects": {
-    "d:\\DADOS\\Pessoal\\Pós\\Service.Notification\\Service.Notification\\03_Tech_Challenge_Servico_Notificacao\\Service.Notification\\Service.Notification\\Service.Notification.csproj": {
+    "D:\\DADOS\\Pessoal\\Pós\\Service.Notification\\Service.Notification\\03_Tech_Challenge_Servico_Notificacao\\Service.Notification\\Service.Notification\\Service.Notification.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "d:\\DADOS\\Pessoal\\Pós\\Service.Notification\\Service.Notification\\03_Tech_Challenge_Servico_Notificacao\\Service.Notification\\Service.Notification\\Service.Notification.csproj",
+        "projectUniqueName": "D:\\DADOS\\Pessoal\\Pós\\Service.Notification\\Service.Notification\\03_Tech_Challenge_Servico_Notificacao\\Service.Notification\\Service.Notification\\Service.Notification.csproj",
         "projectName": "Service.Notification",
-        "projectPath": "d:\\DADOS\\Pessoal\\Pós\\Service.Notification\\Service.Notification\\03_Tech_Challenge_Servico_Notificacao\\Service.Notification\\Service.Notification\\Service.Notification.csproj",
+        "projectPath": "D:\\DADOS\\Pessoal\\Pós\\Service.Notification\\Service.Notification\\03_Tech_Challenge_Servico_Notificacao\\Service.Notification\\Service.Notification\\Service.Notification.csproj",
         "packagesPath": "C:\\Users\\natalia.guimaraes\\.nuget\\packages\\",
-        "outputPath": "d:\\DADOS\\Pessoal\\Pós\\Service.Notification\\Service.Notification\\03_Tech_Challenge_Servico_Notificacao\\Service.Notification\\Service.Notification\\obj\\",
+        "outputPath": "D:\\DADOS\\Pessoal\\Pós\\Service.Notification\\Service.Notification\\03_Tech_Challenge_Servico_Notificacao\\Service.Notification\\Service.Notification\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\natalia.guimaraes\\AppData\\Roaming\\NuGet\\NuGet.Config"
