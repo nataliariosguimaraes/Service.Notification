@@ -1,0 +1,20 @@
+services:
+  notificacao-service:
+    image: natriosg/notificacao:latest # Substitua "latest" pela tag desejada, como "v1.0", se necessário
+    container_name: notificacao-service
+    ports:
+      - "8080:80" # Mapeia a porta 80 do container para a porta 8080 no host
+    environment:
+      RABBITMQ_HOST: rabbitmq-service # Nome do host do RabbitMQ (conforme configurado no Kubernetes)
+      RABBITMQ_PORT: 5672             # Porta padrão do RabbitMQ
+      RABBITMQ_QUEUE: contactQueue    # Nome da fila que será usada
+
+  rabbitmq:
+    image: rabbitmq:3-management
+    container_name: rabbitmq-service
+    ports:
+      - "15672:15672" # Porta para acessar o painel do RabbitMQ
+      - "5672:5672"   # Porta de comunicação do RabbitMQ
+    environment:
+      RABBITMQ_DEFAULT_USER: guest
+      RABBITMQ_DEFAULT_PASS: guest

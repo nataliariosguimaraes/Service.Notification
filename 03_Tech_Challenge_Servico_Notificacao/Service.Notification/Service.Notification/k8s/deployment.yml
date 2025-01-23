@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: rabbitmq-consumer
+  labels:
+    app: rabbitmq-consumer
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: rabbitmq-consumer
+  template:
+    metadata:
+      labels:
+        app: rabbitmq-consumer
+    spec:
+      containers:
+      - name: rabbitmq-consumer
+        image: natriosg/notificacao:latest
+        env:
+        - name: RabbitMQHost
+          value: "rabbitmq-service.default.svc.cluster.local" # Nome do serviço RabbitMQ
+        - name: RabbitMQUser
+          value: "guest"
+        - name: RabbitMQPassword
+          value: "guest"

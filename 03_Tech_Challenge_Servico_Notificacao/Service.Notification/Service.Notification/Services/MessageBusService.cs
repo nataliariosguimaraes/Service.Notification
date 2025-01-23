@@ -9,23 +9,29 @@ namespace Service.Notification.Services;
 
 public class MessageBusService : IMessageBusService
 {
-    private const string QUEUE_NOTIFICATION = "fila-notificacoes";
+
     private readonly IEmailService _emailService;
     private readonly ConnectionFactory _factory;
+
+    private const string QueueName = "contactQueue";
+    private const string RabbitMQHost = "rabbitmq-service.default.svc.cluster.local"; // Nome do serviço RabbitMQ no Kubernetes
+    private const string UserName = "guest"; // Substitua pelo seu usuário
+    private const string Password = "guest"; // Substitua pela sua senha
 
     public MessageBusService(IEmailService emailService)
     {
         _emailService = emailService;
         _factory = new ConnectionFactory
         {
-            HostName = "localhost",
-            UserName = "guest",
-            Password = "guest"
+            HostName = RabbitMQHost,
+            Port = 5672, // Porta padrão do RabbitMQ
+            UserName = UserName,
+            Password = Password
         };
     }
 
     public async Task ProcessQueue(CancellationToken cancellationToken)
-        {
+    {
         Console.WriteLine("Starting to process queue...");
 
         using (var connection = _factory.CreateConnection())
@@ -37,14 +43,14 @@ public class MessageBusService : IMessageBusService
                 Console.WriteLine("Channel created.");
 
                 channel.QueueDeclare(
-                    queue: QUEUE_NOTIFICATION,
-                    durable: true,
+                    queue: QueueName,
+                    durable: false,
                     exclusive: false,
                     autoDelete: false,
                     arguments: null
                 );
 
-                Console.WriteLine($"Queue '{QUEUE_NOTIFICATION}' declared.");
+                Console.WriteLine($"Queue '{QueueName}' declared.");
 
                 var consumer = new EventingBasicConsumer(channel);
 
@@ -89,8 +95,8 @@ public class MessageBusService : IMessageBusService
                     }
                 };
 
-                channel.BasicConsume(QUEUE_NOTIFICATION, false, consumer);
-                Console.WriteLine($"Consumer started on queue '{QUEUE_NOTIFICATION}'.");
+                channel.BasicConsume(QueueName, false, consumer);
+                Console.WriteLine($"Consumer started on queue '{QueueName}'.");
 
                 try
                 {
