@@ -17,10 +17,21 @@ spec:
       containers:
       - name: rabbitmq-consumer
         image: natriosg/notificacao:latest
+        imagePullPolicy: Always
         env:
+        # Configuração do RabbitMQ
         - name: RabbitMQHost
-          value: "rabbitmq-service.default.svc.cluster.local" # Nome do serviço RabbitMQ
+          value: "rabbitmq-service.default.svc.cluster.local"
         - name: RabbitMQUser
           value: "guest"
         - name: RabbitMQPassword
           value: "guest"
+
+      
+
+        # Configuração da API MailerSend
+        - name: MAILERSEND_API_TOKEN
+          valueFrom:
+            secretKeyRef:
+              name: mailersend-secret
+              key: token

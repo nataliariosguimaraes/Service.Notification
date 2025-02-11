@@ -114,3 +114,5 @@ d:\DADOS\Pessoal\Pós\Service.Notification\Service.Notification\03_Tech_Challeng
 d:\DADOS\Pessoal\Pós\Service.Notification\Service.Notification\03_Tech_Challenge_Servico_Notificacao\Service.Notification\Service.Notification\obj\Debug\net8.0\Service.Notification.pdb
 d:\DADOS\Pessoal\Pós\Service.Notification\Service.Notification\03_Tech_Challenge_Servico_Notificacao\Service.Notification\Service.Notification\obj\Debug\net8.0\Service.Notification.genruntimeconfig.cache
 d:\DADOS\Pessoal\Pós\Service.Notification\Service.Notification\03_Tech_Challenge_Servico_Notificacao\Service.Notification\Service.Notification\obj\Debug\net8.0\ref\Service.Notification.dll
+d:\DADOS\Pessoal\Pós\Service.Notification\Service.Notification\03_Tech_Challenge_Servico_Notificacao\Service.Notification\Service.Notification\bin\Debug\net8.0\Microsoft.Extensions.Http.dll
+d:\DADOS\Pessoal\Pós\Service.Notification\Service.Notification\03_Tech_Challenge_Servico_Notificacao\Service.Notification\Service.Notification\bin\Debug\net8.0\System.Diagnostics.DiagnosticSource.dll

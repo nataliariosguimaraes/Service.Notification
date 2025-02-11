@@ -75,8 +75,7 @@ public class MessageBusService : IMessageBusService
 
                         await _emailService.SendEmailAsync(
                             messageNotification.Name,
-                            messageNotification.Email,
-                            messageNotification.Message
+                            messageNotification.Email
                         );
 
                         Console.WriteLine("Email sent successfully.");

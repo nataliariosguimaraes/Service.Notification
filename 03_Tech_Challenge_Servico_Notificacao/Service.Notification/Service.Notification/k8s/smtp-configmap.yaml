@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: smtp-config
+data:
+  SMTP_HOST: "smtp.mailersend.net"
+  SMTP_PORT: "587"
