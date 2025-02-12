@@ -44,7 +44,7 @@ public class MessageBusService : IMessageBusService
 
                 channel.QueueDeclare(
                     queue: QueueName,
-                    durable: false,
+                    durable: true,
                     exclusive: false,
                     autoDelete: false,
                     arguments: null
